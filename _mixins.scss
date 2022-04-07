@@ -1,0 +1,35 @@
+@mixin flex-behavior(
+    $display,
+    $direction,
+    $rowGap,
+    $columnGap
+) {
+    display: $display;
+    flex-direction: $direction;
+    row-gap: $rowGap;
+    column-gap: $columnGap;
+}
+
+@mixin bg-pic (
+    $bgUrl,
+    $bgSize : contain,
+    $bgPosition : center,
+    $bgRepeat : no-repeat
+) {
+    background: url($bgUrl);
+    background-size: $bgSize;
+    background-position: $bgPosition;
+    background-repeat: $bgRepeat;
+}
+
+@mixin aside-box(
+    $wid : 15vh,
+    $heit : 15vh,
+    $border : 0px,
+    $borderStyle : solid,
+    $borderColor : transparent
+) {
+    width: $wid;
+    height: $heit;
+    border: $border $borderStyle $borderColor;
+}

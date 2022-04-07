@@ -1,0 +1,124 @@
+@media (min-width: $defaultMobileSize) {
+
+    .navigation-menu{
+        width: 100%;
+        position: fixed;
+        ul{
+            padding: 0;
+            margin:0;
+            display: flex;
+            background-color: gray;
+        }
+        li{
+            display: flex;
+            width: 100%;
+            text-align: center;
+
+            &:hover{
+                background-color: steelblue;
+            }
+        }
+
+    }
+
+    .projects {
+        p {
+            line-height: 2;
+        }
+
+        div > aside {
+            margin-right: 3%;
+            margin-bottom: 0.5%;
+        }
+    }
+
+    .skills {
+        @include flex-behavior(flex,column,5vh,0px);
+
+        > div > aside {
+            @include aside-box();
+            padding: 15%;
+        }
+
+        #html-5 > aside {
+            @include bg-pic("/img/html-5.png",cover);
+        }
+
+        #css > aside {
+            @include bg-pic("/img/css.png",cover);
+        }
+
+        #javascript > aside {
+            @include bg-pic("/img/javascript.png",cover);
+        }
+        
+        #sass > aside {
+            @include bg-pic("/img/sass.png",cover);
+        }
+
+        #github {
+            > aside {
+                @include bg-pic("/img/github.png",cover);
+            }
+            > p {
+                padding-left: 4%;
+            }
+        } 
+    }
+
+    .education {
+        @include flex-behavior(flex,column,5vh,0px);
+
+        aside {  
+            @include aside-box(45vh,25vh);
+        }
+
+        #tamwood-card > aside {
+            @include bg-pic("/img/tamwood-logo.png");
+        }
+    
+        #chula-card > aside {
+            @include bg-pic("/img/chula-logo.png");
+        }
+    
+        #seoul-card > aside {
+            @include bg-pic("/img/seoul-university-logo.png");
+        }
+    
+        #unam-card > aside {
+            @include bg-pic("/img/unam-logo.png");
+        }
+    }
+
+    .contact {
+        [type="text"], [type="email"], textarea {
+            width: 90%;
+            padding: 3%;
+        }
+
+        form > [class="d-flex"] {
+            justify-content: space-evenly;
+        }
+    }
+
+    .btn {
+        background-color: $btnBg;
+        color: white;
+        font-weight: 600;
+
+        &:hover {
+            background-color: $btnBgHover;
+        }
+    }
+
+    .footer {
+        background-color: $footerBg;
+        color: white;
+        padding: 5%;
+        text-align: center;
+
+        & > span {
+            font-weight: bold;
+        }
+    }
+}
